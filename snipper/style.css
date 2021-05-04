@@ -1,0 +1,133 @@
+:root {
+	overflow-x: hidden;
+	--bg-text: #3b3b3b;
+	--font-stack: Poppins, Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Now Text", "Helvetica Neue", Helvetica, Cantarell, Oxygen, Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+header {
+	background-image: url("./img/background.png");
+	background-size: cover;
+	height: 85vh;
+}
+
+.navbar {
+	height: 10vh;
+}
+
+.navbar-right {
+	text-align: right;
+}
+
+.navbar-right a {
+	padding: 1rem;
+	display: inline-block;
+}
+
+#hero {
+	color: black;
+	text-align: center;
+	width: 100vw;
+	height: 73.5vh;
+	background-image: url("./img/snippet_image.png");
+	background-size: clamp(30rem, 70vw, 60rem);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+main>* {
+	padding: 10rem !important;
+}
+
+#snippet {
+	max-height: 500px;
+	width: clamp(30rem, 40vw, 50rem);
+}
+
+@font-face {
+	font-family: Poppins;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./fonts/Poppins-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Poppins;
+	font-weight: 700;
+	font-display: swap;
+	src: url("./fonts/Poppins-Bold.woff2") format("woff2");
+}
+
+@media (max-width: 1550px) {
+	#snippet {
+		padding: 3rem !important;
+	}
+}
+
+@media (max-width: 1280px) {
+	#snippet {
+		margin-left: clamp(-10rem, 10vw, 15rem);
+		padding: 1rem !important;
+	}
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+	.navbar {
+		height: 15vh;
+	}
+	#hero {
+		height: 68.5vh;
+	}
+}
+
+/* Phone */
+
+@media (max-width: 512px) {
+	.navbar-right * {
+		display: none !important;
+	}
+	.navbar-right::after {
+		content: url("./img/hamburger_menu.svg")
+	}
+	header {
+		height: 90vh;
+	}
+	#hero {
+		background-size: clamp(25rem, 30vw, 30rem);
+		height: 75vh;
+		text-align: center;
+	}
+	:root {
+		--heading-4: 1.5rem;
+		--display-3: 3rem;
+	}
+	main>* {
+		padding: 2rem !important;
+		padding-top: 3rem;
+	}
+	#snippet {
+		margin-left: 0;
+		width: clamp(20rem, 50vw, 30rem);
+	}
+	h1 {
+		margin: 0 auto;
+		width: 70vw;
+	}
+}
+
+/* Kindle Fire */
+@media (min-height: 1200px) {
+	header {
+		height: 70vh;
+	}
+	#hero {
+		height: 59vh;
+	}
+}
+
+@media (max-height: 810px) and (min-width: 768px) {
+	#hero {
+		background-size: 85vh;
+	}
+}
