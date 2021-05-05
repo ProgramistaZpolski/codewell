@@ -1,0 +1,127 @@
+:root {
+	--heading-1: 2.75vw;
+	--heading-2: 2.25vw;
+	--bg-color: #f5f9fe;
+	--blue: #3c2d63;
+	--blue-hover: #271d40;
+	--link-color: #4b4b4b;
+	--font-stack: "Nunito Sans", Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Helvetica Now Text", "Helvetica Neue", Helvetica, Cantarell, Oxygen, Arial, Tahoma, Geneva, Verdana, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+nav ul {
+	justify-content: end;
+	flex: 1;
+}
+
+nav a {
+	position: relative;
+	top: 15px;
+}
+
+fieldset {
+	border: none;
+}
+
+#hero {
+	height: clamp(20rem, 30vw, 40rem);
+	margin: 3rem;
+}
+
+#hero img {
+	padding: 4rem;
+	height: clamp(20rem, 30vw, 40rem);
+}
+
+#hero-text h2 {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+#used-by {
+	position: relative;
+	left: 5rem;
+	width: 70vw;
+}
+
+@font-face {
+	font-family: "Nunito Sans";
+	font-weight: 400;
+	font-display: swap;
+	src: url("./fonts/NunitoSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Nunito Sans";
+	font-weight: 700;
+	font-display: swap;
+	src: url("./fonts/NunitoSans-Bold.woff2") format("woff2");
+}
+
+@media (max-width: 1600px) {
+	#used-by {
+		top: 10rem;
+	}
+}
+
+@media (max-width: 1365px) {
+	#used-by {
+		top: 15rem;
+	}
+}
+
+@media (max-width: 1280px) {
+	#used-by {
+		top: 25rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	#used-by {
+		top: 40rem;
+	}
+}
+
+@media (max-width: 768px) {
+	#hero {
+		text-align: center;
+		margin: 2rem;
+	}
+	.badge {
+		margin-bottom: 1rem;
+	}
+	#hero img {
+		display: none;
+	}
+	#used-by {
+		top: 25rem;
+	}
+	nav ul li {
+		display: none !important;
+	}
+	nav ul:after {
+		content: url("./assets/hamburger.svg");
+	}
+	.inputs>.form-select, .inputs>input, .inputs>textarea {
+		width: unset;
+	}
+	fieldset button {
+		border-top-left-radius: unset;
+		border-bottom-left-radius: unset;
+	}
+}
+
+@media (max-width: 512px) {
+	#hero {
+		margin: 0;
+	}
+	h1 {
+		font-size: clamp(2.25rem, var(--heading-1), 3rem) !important;
+	}
+	#used-by {
+		left: 0;
+		top: 20rem;
+	}
+	:root {
+		--mp-spacing: .5rem;
+	}
+}
