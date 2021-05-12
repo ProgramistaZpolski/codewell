@@ -1,0 +1,99 @@
+:root {
+	--orange: #ee7c0e;
+	--fast-anim: .75s;
+	--link-color: black;
+}
+
+.navbar a:not(.btn) {
+	color: #656565;
+}
+
+.navbar div {
+	flex: 1 0 auto;
+}
+
+.navbar ul {
+	align-items: center;
+}
+
+footer div {
+	flex: 1 0 auto;
+}
+
+article p {
+	color: #656565;
+	font-size: 1.2rem;	
+}
+
+#featured_content {
+	margin-bottom: 5rem;
+}
+
+body {
+	margin: 3rem;
+}
+
+.post {
+	font-size: 1.1rem;
+	line-height: 1.75;
+	margin-left: 10rem;
+}
+
+@font-face {
+	font-family: Manrope;
+	font-weight: 500;
+	font-display: swap;
+	src: url("./fonts/Manrope-Medium.woff2");
+}
+
+@font-face {
+	font-family: Manrope;
+	font-weight: 600;
+	font-display: swap;
+	src: url("./fonts/Manrope-SemiBold.woff2");
+}
+
+@font-face {
+	font-family: Manrope;
+	font-weight: 700;
+	font-display: swap;
+	src: url("./fonts/Manrope-Bold.woff2");
+}
+
+@media (max-width: 768px) {
+	article>img, article a>img {
+		padding: 1rem !important;
+		width: 100%;
+	}
+
+	section.flexbox {
+		display: block;
+	}
+
+	.post {
+		margin-left: 3rem;
+	}
+}
+
+@media (max-width: 500px) {
+	:root {
+		--mp-spacing: 0;
+	}
+
+	nav ul * {
+		display: none !important;
+	}
+
+	nav::after {
+		content: url("./img/hamburger_menu.svg")
+	}
+
+	.post {
+		margin-left: 0;
+	}
+
+	.post img {
+		margin-top: 3rem;
+		width: 100%;
+	}
+}
