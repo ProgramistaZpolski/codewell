@@ -1,0 +1,87 @@
+:root {
+	--bg-color: url("./img/bg.webp");
+	--blue: #013243;
+	--blue-hover: #000d11; 
+}
+
+body {
+	background-size: auto;
+}
+
+main {
+	margin-top: 10rem !important;
+	width: clamp(50rem, 50vw, 80rem);
+	background-color: white;
+}
+
+input:not([type="checkbox"]) {
+	width: 294px;
+	height: 60px;
+	display: block;
+	border: 1px solid #BCBCBC;
+	border-radius: 5px;
+	padding-left: 1rem;
+}
+
+input::placeholder {
+	color: #8d8d8d;
+	opacity: 1;
+}
+
+label {
+	margin-top: 1rem;
+	margin-bottom: .5rem;
+	font-size: 1.25rem;
+	display: block;
+}
+
+.column.bg-normal.text-white.text-center {
+	padding: 0;
+}
+
+img {
+	position: relative;
+	top: .4rem;
+}
+
+/* roboto-regular - latin */
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('./fonts/roboto-v27-latin-regular.woff2') format('woff2')
+}
+
+/* roboto-700 - latin */
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('./fonts/roboto-v27-latin-700.woff2') format('woff2')
+}
+
+/* dm-sans-700 - latin */
+
+@font-face {
+	font-family: "DM Sans";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('../fonts/dm-sans-v6-latin-700.woff2') format('woff2');
+}
+
+@media (max-width: 768px) {
+	main {
+		width: unset;
+	}
+}
+
+@media (max-width: 400px) {
+	main {
+		margin-top: 0 !important;
+	}
+}
